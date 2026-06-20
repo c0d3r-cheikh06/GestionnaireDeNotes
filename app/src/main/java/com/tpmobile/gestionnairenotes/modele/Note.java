@@ -58,7 +58,7 @@ public class Note implements Serializable {
         this.couleur = couleur;
     }
 
-    public boolean estFavori() {
+    public boolean isFavori() {
         return favori;
     }
 

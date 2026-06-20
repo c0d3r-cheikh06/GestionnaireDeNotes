@@ -284,7 +284,7 @@ public class ActivitePrincipale extends AppCompatActivity implements AdaptateurN
 
         List<Note> notesFiltrees = new ArrayList<>();
         for (Note note : toutesLesNotes) {
-            boolean correspondAuFiltreFavoris = !filtreFavorisActif || note.estFavori();
+            boolean correspondAuFiltreFavoris = !filtreFavorisActif || note.isFavori();
             boolean correspondALaRecherche = texteRecherche.isEmpty()
                     || note.getTitre().toLowerCase().contains(texteRecherche);
             if (correspondAuFiltreFavoris && correspondALaRecherche) {
@@ -329,14 +329,14 @@ public class ActivitePrincipale extends AppCompatActivity implements AdaptateurN
 
     @Override
     public void onFavoriBascule(Note note) {
-        note.setFavori(!note.estFavori());
+        note.setFavori(!note.isFavori());
 
         executorService.execute(() -> {
             gestionnaireBaseDeDonnees.noteDao().modifierNote(note);
 
             runOnUiThread(() -> {
                 Toast.makeText(this,
-                        note.estFavori() ? "Ajoutée aux favoris" : "Retirée des favoris",
+                        note.isFavori() ? "Ajoutée aux favoris" : "Retirée des favoris",
                         Toast.LENGTH_SHORT).show();
                 chargerNotesDepuisRoom();
             });

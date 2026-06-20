@@ -86,7 +86,7 @@ public class AdaptateurNotes extends RecyclerView.Adapter<AdaptateurNotes.VueNot
             texteTitreNote.setText(note.getTitre());
             texteDateNote.setText(note.getDate());
             conteneurNote.setBackground(PaletteCouleurs.creerFormeRectangleArrondi(note.getCouleur(), 28f));
-            badgeFavori.setVisibility(note.estFavori() ? View.VISIBLE : View.GONE);
+            badgeFavori.setVisibility(note.isFavori() ? View.VISIBLE : View.GONE);
         }
     }
 }

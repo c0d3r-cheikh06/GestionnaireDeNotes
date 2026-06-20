@@ -104,7 +104,7 @@ public class ActiviteFormulaireNote extends AppCompatActivity {
                     titre,
                     contenu,
                     couleurActuelle,
-                    noteAModifier.estFavori(),
+                    noteAModifier.isFavori(),
                     obtenirDateFormateeActuelle()
             );
         } else {
