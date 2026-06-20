@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/couleur_fond_ecran">
+
+    <LinearLayout
+        android:id="@+id/barreSuperieure"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:padding="16dp"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:id="@+id/conteneurRecherche"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:background="@drawable/forme_fond_arrondi"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp">
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@drawable/ic_rechercher"
+                app:tint="@color/couleur_texte_secondaire" />
+
+            <EditText
+                android:id="@+id/editTexteRecherche"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:layout_marginStart="8dp"
+                android:background="@null"
+                android:hint="Rechercher"
+                android:inputType="text"
+                android:maxLines="1"
+                android:textColor="@color/couleur_texte_principal"
+                android:textColorHint="@color/couleur_texte_secondaire"
+                android:textSize="14sp" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/boutonBasculeFavoris"
+            android:layout_width="wrap_content"
+            android:layout_height="48dp"
+            android:layout_marginStart="12dp"
+            android:background="@drawable/forme_fond_arrondi"
+            android:gravity="center"
+            android:paddingStart="20dp"
+            android:paddingEnd="20dp"
+            android:text="Favoris"
+            android:textColor="@color/couleur_texte_principal"
+            android:textSize="14sp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/barreSecondaire"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        android:paddingBottom="8dp"
+        app:layout_constraintTop_toBottomOf="@id/barreSuperieure">
+
+        <TextView
+            android:id="@+id/texteCompteurNotes"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textColor="@color/couleur_texte_secondaire"
+            android:textSize="12sp" />
+
+        <ImageView
+            android:id="@+id/boutonTrier"
+            android:layout_width="22dp"
+            android:layout_height="22dp"
+            android:layout_marginEnd="20dp"
+            android:padding="2dp"
+            android:src="@drawable/ic_trier"
+            app:tint="@color/couleur_texte_principal" />
+
+        <ImageView
+            android:id="@+id/boutonModeSombre"
+            android:layout_width="22dp"
+            android:layout_height="22dp"
+            android:padding="2dp"
+            android:src="@drawable/ic_mode_sombre"
+            app:tint="@color/couleur_texte_principal" />
+
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/listeNotesRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:clipToPadding="false"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        android:paddingBottom="96dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/barreSecondaire" />
+
+    <TextView
+        android:id="@+id/texteEtatVide"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Aucune notes"
+        android:textColor="@color/couleur_texte_secondaire"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/conteneurPalette"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="24dp"
+        android:layout_marginBottom="24dp"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <View
+            android:id="@+id/couleurVert"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginBottom="10dp"
+            android:visibility="gone" />
+
+        <View
+            android:id="@+id/couleurRouge"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginBottom="10dp"
+            android:visibility="gone" />
+
+        <View
+            android:id="@+id/couleurBleu"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginBottom="10dp"
+            android:visibility="gone" />
+
+        <View
+            android:id="@+id/couleurJaune"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginBottom="10dp"
+            android:visibility="gone" />
+
+        <View
+            android:id="@+id/couleurOrange"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginBottom="10dp"
+            android:visibility="gone" />
+
+        <View
+            android:id="@+id/couleurGris"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginBottom="10dp"
+            android:visibility="gone" />
+
+        <ImageView
+            android:id="@+id/boutonAjouterNote"
+            android:layout_width="56dp"
+            android:layout_height="56dp"
+            android:background="@drawable/forme_bouton_rond"
+            android:padding="16dp"
+            android:src="@drawable/ic_ajouter"
+            app:tint="@color/couleur_blanc" />
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

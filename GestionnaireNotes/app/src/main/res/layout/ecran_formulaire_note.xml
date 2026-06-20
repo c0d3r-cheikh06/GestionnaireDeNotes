@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/couleur_fond_ecran">
+
+    <LinearLayout
+        android:id="@+id/barreFormulaire"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="16dp"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/boutonRetour"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/ic_retour"
+            app:tint="@color/couleur_texte_principal" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_weight="1" />
+
+        <ImageView
+            android:id="@+id/boutonChangerCouleur"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginEnd="20dp"
+            android:src="@drawable/ic_palette_couleurs"
+            app:tint="@color/couleur_texte_principal" />
+
+        <ImageView
+            android:id="@+id/boutonPartagerNote"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginEnd="20dp"
+            android:src="@drawable/ic_partager"
+            android:visibility="gone"
+            app:tint="@color/couleur_texte_principal" />
+
+        <ImageView
+            android:id="@+id/boutonSupprimerNote"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/ic_supprimer"
+            android:visibility="gone"
+            app:tint="@color/couleur_texte_principal" />
+
+    </LinearLayout>
+
+    <View
+        android:id="@+id/fondColoreFormulaire"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        app:layout_constraintBottom_toTopOf="@id/boutonEnregistrer"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/barreFormulaire" />
+
+    <EditText
+        android:id="@+id/editTexteTitre"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        android:background="@null"
+        android:hint="Titre"
+        android:maxLines="1"
+        android:textColor="@color/couleur_noir"
+        android:textColorHint="@color/couleur_indice"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@id/fondColoreFormulaire"
+        app:layout_constraintStart_toStartOf="@id/fondColoreFormulaire"
+        app:layout_constraintTop_toTopOf="@id/fondColoreFormulaire" />
+
+    <EditText
+        android:id="@+id/editTexteContenu"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="20dp"
+        android:background="@null"
+        android:gravity="top|start"
+        android:hint="Contenu"
+        android:inputType="textMultiLine"
+        android:textColor="@color/couleur_noir"
+        android:textColorHint="@color/couleur_indice"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="@id/fondColoreFormulaire"
+        app:layout_constraintEnd_toEndOf="@id/fondColoreFormulaire"
+        app:layout_constraintStart_toStartOf="@id/fondColoreFormulaire"
+        app:layout_constraintTop_toBottomOf="@id/editTexteTitre" />
+
+    <TextView
+        android:id="@+id/boutonEnregistrer"
+        android:layout_width="0dp"
+        android:layout_height="56dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="24dp"
+        android:background="@drawable/forme_bouton_enregistrer"
+        android:gravity="center"
+        android:text="Créer"
+        android:textColor="@color/couleur_blanc"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="12dp">
+
+    <View
+        android:id="@+id/conteneurNote"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:minHeight="64dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingStart="16dp"
+        android:paddingTop="14dp"
+        android:paddingEnd="48dp"
+        android:paddingBottom="14dp"
+        app:layout_constraintBottom_toBottomOf="@id/conteneurNote"
+        app:layout_constraintEnd_toEndOf="@id/conteneurNote"
+        app:layout_constraintStart_toStartOf="@id/conteneurNote"
+        app:layout_constraintTop_toTopOf="@id/conteneurNote">
+
+        <TextView
+            android:id="@+id/texteTitreNote"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:textColor="@color/couleur_blanc"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/texteDateNote"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:alpha="0.85"
+            android:textColor="@color/couleur_blanc"
+            android:textSize="12sp" />
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/badgeFavori"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_marginTop="14dp"
+        android:layout_marginEnd="14dp"
+        android:background="@drawable/forme_bouton_rond"
+        android:padding="5dp"
+        android:src="@drawable/ic_etoile"
+        android:visibility="gone"
+        app:tint="@color/couleur_jaune"
+        app:layout_constraintEnd_toEndOf="@id/conteneurNote"
+        app:layout_constraintTop_toTopOf="@id/conteneurNote" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

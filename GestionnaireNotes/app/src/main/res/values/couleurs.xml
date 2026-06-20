@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="couleur_noir">#000000</color>
+    <color name="couleur_blanc">#FFFFFF</color>
+    <color name="couleur_gris">#828282</color>
+    <color name="couleur_vert">#219653</color>
+    <color name="couleur_rouge">#EB5757</color>
+    <color name="couleur_bleu">#2F80ED</color>
+    <color name="couleur_jaune">#F2C94C</color>
+    <color name="couleur_orange">#F2994A</color>
+
+    <color name="couleur_fond_ecran">#FFFFFF</color>
+    <color name="couleur_surface">#FFFFFF</color>
+    <color name="couleur_bordure">#E0E0E0</color>
+    <color name="couleur_texte_principal">#000000</color>
+    <color name="couleur_texte_secondaire">#828282</color>
+    <color name="couleur_indice">#80000000</color>
+</resources>

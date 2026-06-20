@@ -1,0 +1,8 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <style name="Theme.GestionnaireNotes" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/couleur_noir</item>
+        <item name="colorPrimaryDark">@color/couleur_noir</item>
+        <item name="colorAccent">@color/couleur_noir</item>
+        <item name="android:windowBackground">@color/couleur_fond_ecran</item>
+    </style>
+</resources>
